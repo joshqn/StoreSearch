@@ -16,11 +16,42 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M2N-DL-liM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="KjO-43-wwD"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ig2-3r-flS"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="3ww-tT-3cN">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="y6O-64-93k"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M2N-DL-liM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="87m-k7-KVx"/>
+                            <constraint firstItem="M2N-DL-liM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NP1-dZ-4o0"/>
+                            <constraint firstAttribute="trailing" secondItem="M2N-DL-liM" secondAttribute="trailing" id="Rh8-lA-mt9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="M2N-DL-liM" secondAttribute="bottom" id="WQd-uT-0RV"/>
+                            <constraint firstAttribute="trailing" secondItem="3ww-tT-3cN" secondAttribute="trailing" id="ZOb-Pd-k2S"/>
+                            <constraint firstItem="3ww-tT-3cN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xVL-w0-BQC"/>
+                            <constraint firstItem="3ww-tT-3cN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zjS-nC-Jxn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="3ww-tT-3cN" id="NvZ-L6-1LS"/>
+                        <outlet property="tableView" destination="M2N-DL-liM" id="ms7-AC-GPZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="325" y="398"/>
         </scene>
     </scenes>
 </document>
