@@ -19,6 +19,7 @@ class DetailViewController: UIViewController {
     
     var searchResult: SearchResult!
     var downloadTask: NSURLSessionDownloadTask?
+    var dismissAnimationStyle = AnimationStyle.Fade
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class DetailViewController: UIViewController {
         if searchResult != nil {
             updateUI()
         }
+        view.backgroundColor = UIColor.clearColor()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -87,6 +89,7 @@ class DetailViewController: UIViewController {
     //MARK: Segues and IBActions
     
     @IBAction func close() {
+        dismissAnimationStyle = .Slide
         dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -96,12 +99,31 @@ class DetailViewController: UIViewController {
         }
     }
     
+    enum AnimationStyle {
+        case Slide
+        case Fade
+    }
+    
 
 }
 
 extension DetailViewController: UIViewControllerTransitioningDelegate {
     func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
         return DimmingPresentationController(presentedViewController: presented, presentingViewController: presenting)
+    }
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return BounceAnimationController()
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        switch dismissAnimationStyle {
+        case .Fade:
+            return FadeOutAnimationController()
+        case .Slide:
+            return SlideOutAnimationController()
+        }
+        
     }
 }
 
