@@ -99,6 +99,9 @@ class SearchViewController: UIViewController {
                 }, completion: { _ in
                     controller.view.removeFromSuperview()
                     controller.removeFromParentViewController()
+                    if self.presentedViewController != nil {
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    }
                     self.landscapeViewController = nil
 
             })
@@ -197,6 +200,7 @@ extension SearchViewController:UISearchBarDelegate {
                 if !success {
                     self.showNetworkError()
                 }
+                self.landscapeViewController?.searchResultsReceived()
                 self.tableView.reloadData()
             })
             tableView.reloadData()
