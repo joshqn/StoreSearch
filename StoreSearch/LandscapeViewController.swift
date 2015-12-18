@@ -73,7 +73,7 @@ class LandscapeViewController: UIViewController {
     //MARK: Helpers
     private func showNothingFoundLabel() {
         let label = UILabel(frame: CGRect.zero)
-        label.text = "Nothing Found"
+        label.text = NSLocalizedString("Nothing Found", comment: "LandscapeView: No Content")
         label.textColor = UIColor.whiteColor()
         label.backgroundColor = UIColor.clearColor()
         
@@ -212,6 +212,7 @@ class LandscapeViewController: UIViewController {
             if case .Results(let list) = search.state {
                 let detailViewController = segue.destinationViewController as! DetailViewController
                 let searchResult = list[sender!.tag - 2000]
+                detailViewController.isPopUp = true 
                 detailViewController.searchResult = searchResult
             }
         }

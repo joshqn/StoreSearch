@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  StoreSearch
+
+  Created by Joshua Kuehn on 12/17/15.
+  Copyright © 2015 Kuehn LLC. All rights reserved.
+*/
+
+CFBundleDisplayName = "StoreSearch";
