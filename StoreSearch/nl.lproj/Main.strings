@@ -1,0 +1,33 @@
+
+/* Class = "UIButton"; normalTitle = "$9.99"; ObjectID = "0mT-rA-rB0"; */
+"0mT-rA-rB0.normalTitle" = "$9.99";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "KE3-l1-IIs"; */
+"KE3-l1-IIs.text" = "Name";
+
+/* Class = "UILabel"; text = "Type:"; ObjectID = "Ogc-qz-X9h"; */
+"Ogc-qz-X9h.text" = "Soort:";
+
+/* Class = "UILabel"; text = "Kind Value"; ObjectID = "P6b-lz-gaQ"; */
+"P6b-lz-gaQ.text" = "Kind Value";
+
+/* Class = "UILabel"; text = "Artist Name"; ObjectID = "X64-md-Imj"; */
+"X64-md-Imj.text" = "Artist Name";
+
+/* Class = "UILabel"; text = "Genre Value"; ObjectID = "nSO-am-Lf9"; */
+"nSO-am-Lf9.text" = "Genre Value";
+
+/* Class = "UILabel"; text = "Genre:"; ObjectID = "shc-yz-Uu6"; */
+"shc-yz-Uu6.text" = "Genre:";
+
+/* Class = "UISegmentedControl"; v2k-Kp-jgq.segmentTitles[0] = "All"; ObjectID = "v2k-Kp-jgq"; */
+"v2k-Kp-jgq.segmentTitles[0]" = "Alles";
+
+/* Class = "UISegmentedControl"; v2k-Kp-jgq.segmentTitles[1] = "Music"; ObjectID = "v2k-Kp-jgq"; */
+"v2k-Kp-jgq.segmentTitles[1]" = "Muziek";
+
+/* Class = "UISegmentedControl"; v2k-Kp-jgq.segmentTitles[2] = "Software"; ObjectID = "v2k-Kp-jgq"; */
+"v2k-Kp-jgq.segmentTitles[2]" = "Software";
+
+/* Class = "UISegmentedControl"; v2k-Kp-jgq.segmentTitles[3] = "E-Books"; ObjectID = "v2k-Kp-jgq"; */
+"v2k-Kp-jgq.segmentTitles[3]" = "E-boeken";
